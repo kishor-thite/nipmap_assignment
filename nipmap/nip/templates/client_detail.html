@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Detail</title>
+</head>
+<body>
+{% for client in clients %}
+
+    <h1>Client Detail</h1>
+    <p>Client ID: {{ client.id }}</p>
+    <p>Client Name: {{ client.client_name }}</p>
+    <p>Created by: {{ client.created_by }}</p>
+    <p>Created at: {{ client.created_at }}</p>
+    <a href="{% url 'delete_client' client.id %}"><button class="btn btn-danger">Delete</button></a></td>
+    <a href="{% url 'client' client.id %}"><button class="btn btn-danger">Get Project</button></a></td>
+
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assigned Projects</title>
+</head>
+<body>
+    <h1>Assign Projects</h1>
+    <ul>
+    {% for project in projects %}
+        <li>{{ project.project_name }} - Assign To:{{ project.client }} - Created Date : {{ project.created_at }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

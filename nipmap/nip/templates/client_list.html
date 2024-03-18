@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client List</title>
+</head>
+<body>
+    <h1>Client List</h1>
+    <ul>
+    {% for client in clients %}
+        <li>ID {{client.client_id}}
+
+            {{ client.client_name }} - Created by: {{ client.created_by }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

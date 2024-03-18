@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Client</title>
+</head>
+<body>
+    <h1>Edit Client</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="client_name">Client Name:</label><br>
+        <input type="text" id="client_name" name="client_name" value="{{ client.client_name }}"><br>
+        <input type="submit" value="Update Client">
+    </form>
+</body>
+</html>
